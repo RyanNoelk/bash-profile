@@ -1,0 +1,21 @@
+# Docker Comamnds
+alias d_stop='docker stop $(docker ps -a -q)'
+alias d_rm='docker rm $(docker ps -a -q)'
+alias d_img_rm='docker rmi $(docker images | grep "^<none>" | awk "{print $3}")'
+
+# SSH shortcuts
+alias tribridge_server='ssh rnoelk@us-prod.cloudapp.net -p 51022'
+
+# Amex App Docker
+alias amex_api='bash -c "clear && docker exec -it amexapp_api_1 sh"'
+alias amex_db='bash -c "clear && docker exec -it amexapp_db_1 psql -U postgres"'
+
+# Openeats App Docker
+alias openeats_node='bash -c "clear && docker exec -it openeats_node_1 bash"'
+alias openeats_api='bash -c "clear && docker exec -it openeats_api_1 bash"'
+alias openeats_db='bash -c "clear && docker exec -it openeats_db_1 bash"'
+
+# Graf App Docker
+alias graf_api='bash -c "clear && docker exec -it amexgrafapp_api_1 sh"'
+alias graf_db='bash -c "clear && docker exec -it amexgrafapp_db_1 psql -U postgres"'
+alias graf_node='bash -c "clear && docker exec -it graf_node_1 bash"'
