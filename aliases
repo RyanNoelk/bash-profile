@@ -37,4 +37,10 @@ alias openeats_db='bash -c "clear && docker exec -it openeats_db_1 sh"'
 # Graf App Docker
 alias graf_api='bash -c "clear && docker exec -it amexgrafapp_api_1 sh"'
 alias graf_db='bash -c "clear && docker exec -it amexgrafapp_db_1 psql -U postgres"'
-alias graf_node='bash -c "clear && docker exec -it graf_node_1 bash"'
+alias graf_node='bash -c "clear && docker exec -it graf_node_1 sh"'
+
+# Honeywell App Docker
+alias honeywell_api='bash -c "clear && docker exec -it honeywellicsapp_api_1 sh"'
+alias honeywell_db='bash -c "clear && docker exec -it honeywellicsapp_db_1 psql -U postgres"'
+alias honeywell_node='bash -c "clear && docker exec -it honeywellicsuix_node_1 sh"'
+
