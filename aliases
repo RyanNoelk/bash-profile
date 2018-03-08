@@ -4,6 +4,8 @@ git config --global alias.br branch
 git config --global alias.ci commit
 git config --global alias.st status
 alias gitsubpull="ls -R --directory --color=never */.git | sed 's/\/.git//' | xargs -P10 -I{} git -C {} pull"
+alias gitdeletebranches="git fetch --all -p; git branch -vv | grep ': gone]' | awk '{ print $1 }' | xargs -n 1 git branch -D"
+alias gitdeletemergedbranches="git branch --merged | egrep -v '(^\*|master|dev)' | xargs git branch -d"
 
 # Docker Comamnds
 alias dps="docker ps"
