@@ -3,7 +3,7 @@ git config --global alias.co checkout
 git config --global alias.br branch
 git config --global alias.ci commit
 git config --global alias.st status
-alias gitsubpull="ls -R --directory --color=never */.git | sed 's/\/.git//' | xargs -P10 -I{} git -C {} pull"
+alias gitsubpull="ls -R -d -- */.git | sed 's/\/.git//' | xargs -P10 -I{} git -C {} pull"
 alias gitdeletebranches="git fetch --all -p; git branch -vv | grep ': gone]' | awk '{ print $1 }' | xargs -n 1 git branch -D"
 alias gitdeletemergedbranches="git branch --merged | egrep -v '(^\*|master|dev)' | xargs git branch -d"
 
@@ -31,6 +31,10 @@ alias tribridge_server='ssh rnoelk@us-prod.cloudapp.net -p 51022'
 # Amex App Docker
 alias amex_api='bash -c "clear && docker exec -it amexapp_api_1 sh"'
 alias amex_db='bash -c "clear && docker exec -it amexapp_db_1 psql -U postgres"'
+
+# Citrix Docker
+alias citrixconnectorweb_api='bash -c "clear && docker exec -it citrixconnectorweb_api_1 sh"'
+alias citrixconnectorweb_db='bash -c "clear && docker exec -it citrixconnectorweb_db_1 psql -U postgres"'
 
 # Openeats App Docker
 alias openeats_web='bash -c "clear && docker exec -it openeats_web_1 sh"'
