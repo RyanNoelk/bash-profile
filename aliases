@@ -25,17 +25,6 @@ alias d_rm='docker rm $(docker ps -a -q)'
 alias d_img_rm='docker rmi $(docker images | grep "^<none>" | awk "{print $3}")'
 alias d_super_clean='d_stop && d_rm && d_img_rm'
 
-# SSH shortcuts
-alias tribridge_server='ssh rnoelk@us-prod.cloudapp.net -p 51022'
-
-# Amex App Docker
-alias amex_api='bash -c "clear && docker exec -it amexapp_api_1 sh"'
-alias amex_db='bash -c "clear && docker exec -it amexapp_db_1 psql -U postgres"'
-
-# Citrix Docker
-alias citrixconnectorweb_api='bash -c "clear && docker exec -it citrixconnectorweb_api_1 sh"'
-alias citrixconnectorweb_db='bash -c "clear && docker exec -it citrixconnectorweb_db_1 psql -U postgres"'
-
 # Openeats App Docker
 alias openeats_web='bash -c "clear && docker exec -it openeats_web_1 sh"'
 alias openeats_api='bash -c "clear && docker exec -it openeats_api_1 sh"'
@@ -45,9 +34,3 @@ alias openeats_db='bash -c "clear && docker exec -it openeats_db_1 sh"'
 alias graf_api='bash -c "clear && docker exec -it amexgrafapp_api_1 sh"'
 alias graf_db='bash -c "clear && docker exec -it amexgrafapp_db_1 psql -U postgres"'
 alias graf_node='bash -c "clear && docker exec -it graf_node_1 sh"'
-
-# Honeywell App Docker
-alias honeywell_api='bash -c "clear && docker exec -it honeywellicsapp_api_1 sh"'
-alias honeywell_db='bash -c "clear && docker exec -it honeywellicsapp_db_1 psql -U postgres"'
-alias honeywell_node='bash -c "clear && docker exec -it honeywellicsuix_node_1 sh"'
-
