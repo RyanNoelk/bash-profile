@@ -30,7 +30,7 @@ alias openeats_web='bash -c "clear && docker exec -it openeats_web_1 sh"'
 alias openeats_api='bash -c "clear && docker exec -it openeats_api_1 sh"'
 alias openeats_db='bash -c "clear && docker exec -it openeats_db_1 sh"'
 
-# Graf App Docker
-alias graf_api='bash -c "clear && docker exec -it amexgrafapp_api_1 sh"'
-alias graf_db='bash -c "clear && docker exec -it amexgrafapp_db_1 psql -U postgres"'
-alias graf_node='bash -c "clear && docker exec -it graf_node_1 sh"'
+# Link2 App Docker
+alias link2_api='bash -c "clear && docker exec -it link2_api_1 sh"'
+alias link2_db='bash -c "clear && docker exec -it link2_db_1 psql -U postgres"'
+alias link2_ui='bash -c "clear && docker exec -it link2_ui_1 sh"'
